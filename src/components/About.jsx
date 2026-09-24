@@ -3,7 +3,7 @@ import aboutImg from '../assets/aboutimg.jpeg'
 
 export default function About() {
   return (
-    <section id="about" className="relative bg-ink py-28 lg:py-36">
+    <section id="about" className="relative bg-ink py-28 pb-20 lg:py-36 lg:pb-36">
       <div className="container-page grid lg:grid-cols-12 gap-12 lg:gap-8 items-center">
         <motion.div
           initial={{ opacity: 0, x: -24 }}
@@ -16,16 +16,19 @@ export default function About() {
             <img
               src={aboutImg}
               alt="A violin instructor guiding a young student's bow hold"
-              className="w-full h-[460px] object-cover"
+              className="w-full h-[240px] sm:h-[380px] lg:h-[460px] object-cover"
             />
-            <div className="absolute -bottom-6 -right-6 hidden sm:block bg-blue-deep border border-gold/40 px-7 py-5">
-              <p className="font-display text-3xl text-gold">9</p>
+
+            {/* Stat box — hangs below the image bottom-right on all sizes */}
+            <div className="absolute -bottom-8 right-3 sm:-bottom-6 sm:-right-6 bg-blue-deep border border-gold/40 px-5 py-4 sm:px-7 sm:py-5 z-10">
+              <p className="font-display text-2xl sm:text-3xl text-gold">9</p>
               <p className="text-xs text-bone mt-1 max-w-[9rem]">
                 Years shaping musicians across every discipline
               </p>
             </div>
           </div>
         </motion.div>
+
 
         <motion.div
           initial={{ opacity: 0, x: 24 }}
