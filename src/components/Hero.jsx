@@ -1,5 +1,6 @@
 import { motion } from 'framer-motion'
 import StaffLines from './StaffLines'
+import heroImage from '../assets/heroimage.jpeg'
 
 export default function Hero() {
   return (
@@ -7,7 +8,7 @@ export default function Hero() {
       {/* Background image */}
       <div className="absolute inset-0">
         <img
-          src="https://images.unsplash.com/photo-1520523839897-bd0b52f945a0?auto=format&fit=crop&w=1800&q=80"
+          src={heroImage}
           alt="A grand piano keyboard lit dramatically on a concert stage"
           className="w-full h-full object-cover object-[center_30%]"
         />

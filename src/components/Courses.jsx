@@ -1,5 +1,11 @@
 import { motion } from 'framer-motion'
 import { Music3, Mic2, Guitar, Music4, Drum, Headphones } from 'lucide-react'
+import coursesImg1 from '../assets/coursesimg1.jpeg'
+import coursesImg2 from '../assets/coursesimg2.jpeg'
+import coursesImg3 from '../assets/coursesimg3.jpeg'
+import coursesImg4 from '../assets/coursesimg4.jpeg'
+import coursesImg5 from '../assets/coursesimg5.jpeg'
+import coursesImg6 from '../assets/coursesimg6.jpeg'
 
 const COURSES = [
   {
@@ -8,7 +14,7 @@ const COURSES = [
     desc: 'From first scales to concerto repertoire, taught on concert-grade instruments.',
     level: 'Ages 6+',
     duration: 'Grades 1–8 + Diploma',
-    img: 'https://images.unsplash.com/photo-1552422535-c45813c61732?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg1,
   },
   {
     icon: Mic2,
@@ -16,7 +22,7 @@ const COURSES = [
     desc: 'Classical and contemporary technique, breath control and stage presence.',
     level: 'Ages 8+',
     duration: '3 proficiency tiers',
-    img: 'https://images.unsplash.com/photo-1516280440614-37939bbacd81?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg2,
   },
   {
     icon: Guitar,
@@ -24,7 +30,7 @@ const COURSES = [
     desc: 'Fingerstyle, chord theory and improvisation across genres and styles.',
     level: 'Ages 7+',
     duration: 'Beginner to Advanced',
-    img: 'https://images.unsplash.com/photo-1510915361894-db8b60106cb1?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg3,
   },
   {
     icon: Music4,
@@ -32,7 +38,7 @@ const COURSES = [
     desc: 'Posture, bowing and intonation, with chamber ensemble performance.',
     level: 'Ages 6+',
     duration: 'Grades 1–8',
-    img: 'https://images.unsplash.com/photo-1612225330812-01a9c6b355ec?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg4,
   },
   {
     icon: Drum,
@@ -40,7 +46,7 @@ const COURSES = [
     desc: 'Rhythm foundations, kit technique and ensemble timing for every genre.',
     level: 'Ages 8+',
     duration: 'Beginner to Advanced',
-    img: 'https://images.unsplash.com/photo-1519892300165-cb5542fb47c7?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg5,
   },
   {
     icon: Headphones,
@@ -48,7 +54,7 @@ const COURSES = [
     desc: 'Harmony, composition and modern studio production from first principles.',
     level: 'Ages 14+',
     duration: '2-year track',
-    img: 'https://images.unsplash.com/photo-1598488035139-bdbb2231ce04?auto=format&fit=crop&w=800&q=80',
+    img: coursesImg6,
   },
 ]
 

@@ -1,4 +1,5 @@
 import { motion } from 'framer-motion'
+import aboutImg from '../assets/aboutimg.jpeg'
 
 export default function About() {
   return (
@@ -13,7 +14,7 @@ export default function About() {
         >
           <div className="relative">
             <img
-              src="https://images.unsplash.com/photo-1465847899084-d164df4dedc6?auto=format&fit=crop&w=900&q=80"
+              src={aboutImg}
               alt="A violin instructor guiding a young student's bow hold"
               className="w-full h-[460px] object-cover"
             />
