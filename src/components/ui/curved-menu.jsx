@@ -40,20 +40,20 @@ function NavLink({ heading, subheading, href, index, onClose }) {
     <motion.div
       initial="initial"
       whileHover="whileHover"
-      className="group relative flex flex-col border-b py-4 md:py-6 uppercase cursor-pointer"
-      style={{ borderColor: 'rgba(198,161,91,0.25)' }}
+      className="group relative flex flex-col border-b py-2.5 uppercase cursor-pointer"
+      style={{ borderColor: 'rgba(198,161,91,0.20)' }}
     >
       <a
         ref={ref}
         href={href}
         onMouseMove={handleMouseMove}
         onClick={onClose}
-        className="relative flex items-start no-underline"
+        className="relative flex items-center no-underline"
         style={{ textDecoration: 'none' }}
       >
         {/* Index number */}
         <span
-          className="text-3xl font-thin mr-3 transition-colors duration-300"
+          className="text-base font-thin mr-2.5 w-6 shrink-0 transition-colors duration-300"
           style={{ color: '#8A6F3D' }}
         >
           {String(index).padStart(2, '0')}.
@@ -64,10 +64,10 @@ function NavLink({ heading, subheading, href, index, onClose }) {
           <motion.span
             variants={{
               initial: { x: 0 },
-              whileHover: { x: -12 },
+              whileHover: { x: -8 },
             }}
-            transition={{ type: 'spring', staggerChildren: 0.04, delayChildren: 0.1 }}
-            className="flex text-3xl font-extralight tracking-wide"
+            transition={{ type: 'spring', staggerChildren: 0.03, delayChildren: 0.05 }}
+            className="flex text-xl font-extralight tracking-wide"
             style={{ color: '#F4F1E9' }}
           >
             {heading.split('').map((letter, i) => (
@@ -75,7 +75,7 @@ function NavLink({ heading, subheading, href, index, onClose }) {
                 key={i}
                 variants={{
                   initial: { x: 0 },
-                  whileHover: { x: 12 },
+                  whileHover: { x: 8 },
                 }}
                 transition={{ type: 'spring', stiffness: 200, damping: 16 }}
                 className="inline-block"
@@ -88,7 +88,7 @@ function NavLink({ heading, subheading, href, index, onClose }) {
           {/* Subheading */}
           {subheading && (
             <span
-              className="text-xs mt-0.5 tracking-wider font-light opacity-60 transition-opacity duration-300 group-hover:opacity-100"
+              className="text-[10px] tracking-wider font-light opacity-50 transition-opacity duration-300 group-hover:opacity-90 normal-case"
               style={{ color: '#C6A15B' }}
             >
               {subheading}
@@ -99,6 +99,7 @@ function NavLink({ heading, subheading, href, index, onClose }) {
     </motion.div>
   )
 }
+
 
 // ─── Curved SVG edge on the left of the panel ────────────────────────────────
 function Curve() {
@@ -136,7 +137,7 @@ function Curve() {
 function MenuFooter({ onClose }) {
   return (
     <div
-      className="flex w-full justify-between items-center px-8 md:px-16 py-5 border-t"
+      className="flex w-full justify-between items-center px-6 py-3 border-t"
       style={{ borderColor: 'rgba(198,161,91,0.20)' }}
     >
       <a
@@ -176,41 +177,44 @@ function CurvedNavPanel({ navItems, onClose }) {
       initial="initial"
       animate="enter"
       exit="exit"
-      className="fixed right-0 top-0 z-[90] h-[100dvh] w-full max-w-sm flex flex-col justify-between"
+      className="fixed right-0 top-0 z-[90] h-[100dvh] w-full max-w-[320px] flex flex-col"
       style={{ background: '#0c0d12', borderLeft: '1px solid rgba(198,161,91,0.15)' }}
     >
       {/* Header label */}
-      <div className="flex flex-col px-8 md:px-16 pt-20 gap-0">
+      <div className="flex flex-col px-6 pt-14 pb-0 shrink-0">
         <div
-          className="text-xs uppercase tracking-widest pb-4 border-b mb-2"
+          className="text-[10px] uppercase tracking-widest pb-3 border-b"
           style={{ color: '#8A6F3D', borderColor: 'rgba(198,161,91,0.25)' }}
         >
           Navigation
         </div>
-
-        {/* Nav links */}
-        <nav>
-          {navItems.map((item, i) => (
-            <NavLink
-              key={item.name}
-              heading={item.name}
-              subheading={item.subheading}
-              href={item.url}
-              index={i + 1}
-              onClose={onClose}
-            />
-          ))}
-        </nav>
       </div>
 
+      {/* Nav links — scrollable so all 9 items always fit */}
+      <nav className="flex-1 overflow-y-auto px-6 py-1 min-h-0">
+        {navItems.map((item, i) => (
+          <NavLink
+            key={item.name}
+            heading={item.name}
+            subheading={item.subheading}
+            href={item.url}
+            index={i + 1}
+            onClose={onClose}
+          />
+        ))}
+      </nav>
+
       {/* Footer */}
-      <MenuFooter onClose={onClose} />
+      <div className="shrink-0">
+        <MenuFooter onClose={onClose} />
+      </div>
 
       {/* Curved left edge */}
       <Curve />
     </motion.div>
   )
 }
+
 
 // ─── Hamburger toggle button ──────────────────────────────────────────────────
 export function CurvedMenuToggle({ isOpen, onClick }) {
