@@ -54,7 +54,7 @@ export function NavBar({ items, className }) {
   return (
     <div
       className={cn(
-        "fixed bottom-4 sm:bottom-auto sm:top-5 left-1/2 -translate-x-1/2 z-50 mb-0 sm:pt-0 max-w-[calc(100vw-1rem)]",
+        "hidden md:block fixed sm:top-5 left-1/2 -translate-x-1/2 z-50 mb-0 sm:pt-0",
         className,
       )}
     >
