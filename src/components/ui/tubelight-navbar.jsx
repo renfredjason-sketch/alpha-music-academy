@@ -54,11 +54,11 @@ export function NavBar({ items, className }) {
   return (
     <div
       className={cn(
-        "fixed bottom-4 sm:bottom-auto sm:top-5 left-1/2 -translate-x-1/2 z-50 mb-0 sm:pt-0",
+        "fixed bottom-4 sm:bottom-auto sm:top-5 left-1/2 -translate-x-1/2 z-50 mb-0 sm:pt-0 max-w-[calc(100vw-1rem)]",
         className,
       )}
     >
-      <div className="flex items-center gap-1.5 sm:gap-2 bg-ink/80 border border-white/10 backdrop-blur-xl py-1.5 px-2 rounded-full shadow-2xl shadow-black/80 ring-1 ring-gold/20">
+      <div className="flex items-center gap-1 sm:gap-2 bg-ink/85 border border-white/10 backdrop-blur-xl py-1 sm:py-1.5 px-1.5 sm:px-2 rounded-full shadow-2xl shadow-black/80 ring-1 ring-gold/20 overflow-x-auto no-scrollbar">
         {items.map((item) => {
           const Icon = item.icon
           const isActive = activeTab === item.name
@@ -69,14 +69,14 @@ export function NavBar({ items, className }) {
               href={item.url}
               onClick={() => setActiveTab(item.name)}
               className={cn(
-                "relative cursor-pointer text-xs sm:text-sm font-medium px-3.5 sm:px-5 py-1.5 rounded-full transition-colors duration-200 select-none flex items-center justify-center gap-2 whitespace-nowrap",
+                "relative cursor-pointer text-xs sm:text-sm font-medium px-2.5 sm:px-5 py-1.5 rounded-full transition-colors duration-200 select-none flex items-center justify-center gap-2 whitespace-nowrap shrink-0",
                 "text-bone/80 hover:text-ivory",
                 isActive && "bg-white/10 text-gold font-semibold",
               )}
             >
               <span className="hidden md:inline whitespace-nowrap">{item.name}</span>
-              <span className="md:hidden flex items-center justify-center">
-                {Icon && <Icon size={18} strokeWidth={2.2} />}
+              <span className="md:hidden flex items-center justify-center p-0.5">
+                {Icon && <Icon size={17} strokeWidth={2.2} />}
               </span>
               {isActive && (
                 <motion.div

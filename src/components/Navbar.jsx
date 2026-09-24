@@ -1,16 +1,26 @@
-import { Home, Info, BookOpen, Sparkles, Image, Mail } from 'lucide-react'
+import {
+  Home,
+  Info,
+  Clock,
+  BookOpen,
+  BarChart2,
+  Sparkles,
+  Image,
+  Quote,
+  Mail,
+} from 'lucide-react'
 import { NavBar } from '@/components/ui/tubelight-navbar'
 import logo from '../assets/logo.png'
 
 const NAV_ITEMS = [
   { name: 'Home', url: '#top', icon: Home },
   { name: 'About', url: '#about', icon: Info },
-  { name: 'History', url: '#history', icon: BookOpen },
+  { name: 'History', url: '#history', icon: Clock },
   { name: 'Courses', url: '#courses', icon: BookOpen },
-  { name: 'Statistics', url: '#statistics', icon: BookOpen },
+  { name: 'Stats', url: '#statistics', icon: BarChart2 },
   { name: 'Why Us', url: '#why-us', icon: Sparkles },
   { name: 'Gallery', url: '#gallery', icon: Image },
-  { name: 'Testimonials', url: '#testimonials', icon: Sparkles },
+  { name: 'Voices', url: '#testimonials', icon: Quote },
   { name: 'Contact', url: '#contact', icon: Mail },
 ]
 
@@ -34,8 +44,8 @@ export default function Navbar() {
         </a>
       </div>
 
-      {/* Tubelight floating navigation bar with scrollspy */}
-      <NavBar items={NAV_ITEMS} />
+      {/* Tubelight floating navigation bar with scrollspy, shifted slightly right on desktop */}
+      <NavBar items={NAV_ITEMS} className="sm:left-[55%]" />
 
       {/* Floating Apply CTA top-right badge */}
       <div className="hidden md:block fixed top-5 right-4 sm:right-8 z-50 pointer-events-auto">
