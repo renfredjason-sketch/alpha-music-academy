@@ -55,7 +55,7 @@ export default function Hero() {
           transition={{ duration: 0.8, delay: 0.35 }}
           className="mt-8 max-w-xl text-bone text-lg leading-relaxed"
         >
-          Alpha Music Academy trains pianists, vocalists and instrumentalists
+          Alpha Music Academy trains vocalists and instrumentalists
           through rigorous, personalised instruction — from a child's first
           scale to a professional's concert debut.
         </motion.p>
@@ -68,13 +68,13 @@ export default function Hero() {
         >
           <a
             href="#admission"
-            className="inline-flex items-center bg-gold text-ink px-8 py-3.5 text-sm font-medium hover:bg-gold-light transition-colors"
+            className="inline-flex items-center justify-center rounded-full bg-gold text-ink px-8 py-3.5 text-sm font-medium hover:bg-gold-light transition-colors"
           >
             Go to Admissions
           </a>
           <a
             href="#courses"
-            className="inline-flex items-center border border-white/30 text-ivory px-8 py-3.5 text-sm hover:border-gold hover:text-gold transition-colors"
+            className="inline-flex items-center justify-center rounded-full border border-white/30 text-ivory px-8 py-3.5 text-sm hover:border-gold hover:text-gold transition-colors"
           >
             Explore Courses
           </a>

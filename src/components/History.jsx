@@ -7,12 +7,12 @@ const MILESTONES = [
     desc: 'Alpha Music Academy opens in one small studio room, teaching piano and violin to a handful of students under founder-led lessons.',
   },
   {
-    year: '2013',
+    year: '2017',
     title: 'Building a proper home for music',
     desc: 'The academy moves into a larger space with acoustically treated practice rooms and its first concert-grade piano.',
   },
   {
-    year: '2015',
+    year: '2018',
     title: 'A wider curriculum',
     desc: 'Guitar, woodwind and vocal programs are introduced, and Alpha becomes an affiliated exam centre for Trinity College London.',
   },
@@ -53,7 +53,7 @@ export default function History() {
               Our history
             </h1>
             <p className="text-bone text-lg mt-6 leading-relaxed">
-              From a single studio room to a full conservatory — the story of
+              From a single classroom to a huge academy — the story of
               Alpha Music Academy has always been written one student, one
               lesson at a time.
             </p>

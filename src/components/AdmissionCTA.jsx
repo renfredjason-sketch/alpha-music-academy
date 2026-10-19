@@ -29,7 +29,7 @@ export default function AdmissionCTA() {
               viewport={{ once: true }}
               transition={{ duration: 0.6 }}
               href="#contact"
-              className="mt-9 inline-flex items-center bg-gold text-ink px-9 py-4 text-sm font-medium hover:bg-gold-light transition-colors"
+              className="mt-9 inline-flex items-center justify-center rounded-full bg-gold text-ink px-9 py-4 text-sm font-medium hover:bg-gold-light transition-colors"
             >
               Apply for Admission
             </MotionLink>

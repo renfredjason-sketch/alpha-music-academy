@@ -131,7 +131,7 @@ export default function Contact() {
               <div className="sm:col-span-2">
                 <button
                   type="submit"
-                  className="inline-flex items-center bg-gold text-ink px-9 py-3.5 text-sm font-medium hover:bg-gold-light transition-colors"
+                  className="inline-flex items-center justify-center rounded-full bg-gold text-ink px-9 py-3.5 text-sm font-medium hover:bg-gold-light transition-colors"
                 >
                   Send Enquiry
                 </button>

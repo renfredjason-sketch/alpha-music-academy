@@ -6,6 +6,7 @@ import About from './components/About'
 import History from './components/History'
 import Courses from './components/Courses'
 import Statistics from './components/Statistics'
+import Tutors from './components/Tutors'
 import WhyChooseUs from './components/WhyChooseUs'
 import Gallery from './components/Gallery'
 import Testimonials from './components/Testimonials'
@@ -26,6 +27,7 @@ export default function App() {
         <History />
         <Courses />
         <Statistics />
+        <Tutors />
         <WhyChooseUs />
         <Gallery />
         <Testimonials />

@@ -44,21 +44,22 @@ export default function About() {
           <p className="text-bone text-lg leading-relaxed">
             Alpha Music Academy was founded on a simple conviction: that
             serious musicianship should not be reserved for the few. Our
-            faculty — concert performers, examiners and recording artists —
+            faculty — certified musicians, concert performers, and examiners —
             bring conservatory-level rigour to students of every age and
-            stage, from the first lesson to the audition room.
+            stage, from the first lesson to the last step.
           </p>
           <p className="text-bone text-lg leading-relaxed mt-6">
             Each student follows a personal curriculum built around
             technique, theory and performance, culminating in graded
-            examinations, recitals and, for many, a place at leading music
-            colleges around the world.
+            examinations and recitals. Many have went on to become
+            church musicians and tutors, leading the next generation
+            by example.
           </p>
 
           <div className="mt-10 grid grid-cols-2 gap-8 max-w-md">
             <div>
               <p className="font-display text-2xl text-gold">12</p>
-              <p className="text-sm text-bone mt-1">Instruments taught, from oud to cello</p>
+              <p className="text-sm text-bone mt-1">Instruments taught</p>
             </div>
             <div>
               <p className="font-display text-2xl text-gold">1-to-1</p>
